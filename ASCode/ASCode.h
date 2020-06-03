@@ -15,5 +15,14 @@ FOUNDATION_EXPORT double ASCodeVersionNumber;
 FOUNDATION_EXPORT const unsigned char ASCodeVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ASCode/PublicHeader.h>
+
+// category
+#import <ASCode/UIButton+ASCButton.h>
+
+// misc
 #import <ASCode/ASCProtocolAutoImplementer.h>
+
+// ui
+#import <ASCode/ASCSinglePickerView.h>
+#import <ASCode/ASCTimePickerView.h>
 

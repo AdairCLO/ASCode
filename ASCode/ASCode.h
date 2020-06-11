@@ -21,6 +21,7 @@ FOUNDATION_EXPORT const unsigned char ASCodeVersionString[];
 
 // misc
 #import <ASCode/ASCProtocolAutoImplementer.h>
+#import <ASCode/ASCTextureUtility.h>
 
 // ui
 #import <ASCode/ASCSinglePickerView.h>

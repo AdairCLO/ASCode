@@ -16,6 +16,8 @@
 		75CBDC1D24878476005C167A /* ASCSinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CBDC1B24878476005C167A /* ASCSinglePickerView.m */; };
 		75CBDC2224878D0E005C167A /* ASCTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CBDC2024878D0E005C167A /* ASCTimePickerView.m */; };
 		75CBDC2324878D0E005C167A /* ASCTimePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75CBDC2124878D0E005C167A /* ASCTimePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75D87559249225F7007E1AC6 /* ASCTextureUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D87557249225F7007E1AC6 /* ASCTextureUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75D8755A249225F7007E1AC6 /* ASCTextureUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D87558249225F7007E1AC6 /* ASCTextureUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		75CBDC1B24878476005C167A /* ASCSinglePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASCSinglePickerView.m; sourceTree = "<group>"; };
 		75CBDC2024878D0E005C167A /* ASCTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASCTimePickerView.m; sourceTree = "<group>"; };
 		75CBDC2124878D0E005C167A /* ASCTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCTimePickerView.h; sourceTree = "<group>"; };
+		75D87557249225F7007E1AC6 /* ASCTextureUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCTextureUtility.h; sourceTree = "<group>"; };
+		75D87558249225F7007E1AC6 /* ASCTextureUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCTextureUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 			children = (
 				7598945A24726D68002190D6 /* ASCProtocolAutoImplementer.h */,
 				7598945B24726D68002190D6 /* ASCProtocolAutoImplementer.m */,
+				75D87557249225F7007E1AC6 /* ASCTextureUtility.h */,
+				75D87558249225F7007E1AC6 /* ASCTextureUtility.m */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -112,6 +118,7 @@
 				75CBDC1C24878476005C167A /* ASCSinglePickerView.h in Headers */,
 				7598945C24726D68002190D6 /* ASCProtocolAutoImplementer.h in Headers */,
 				75CBDC1824878234005C167A /* UIButton+ASCButton.h in Headers */,
+				75D87559249225F7007E1AC6 /* ASCTextureUtility.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75CBDC1D24878476005C167A /* ASCSinglePickerView.m in Sources */,
+				75D8755A249225F7007E1AC6 /* ASCTextureUtility.m in Sources */,
 				75CBDC2224878D0E005C167A /* ASCTimePickerView.m in Sources */,
 				7598945D24726D68002190D6 /* ASCProtocolAutoImplementer.m in Sources */,
 				75CBDC1924878234005C167A /* UIButton+ASCButton.m in Sources */,

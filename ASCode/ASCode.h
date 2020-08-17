@@ -26,4 +26,7 @@ FOUNDATION_EXPORT const unsigned char ASCodeVersionString[];
 // ui
 #import <ASCode/ASCSinglePickerView.h>
 #import <ASCode/ASCTimePickerView.h>
+#import <ASCode/ASCViewControllerInteractiveTransitionTrigger.h>
+#import <ASCode/ACSViewControllerLeftRightAnimatedTransition.h>
+#import <ASCode/ASCBackgroundViewPresentationController.h>
 

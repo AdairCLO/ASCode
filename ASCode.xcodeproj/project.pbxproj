@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7518A79F24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 7518A79D24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7518A7A024EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518A79E24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m */; };
+		7518A7A324EA2F9700741754 /* ASCBackgroundViewPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7518A7A124EA2F9700741754 /* ASCBackgroundViewPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7518A7A424EA2F9700741754 /* ASCBackgroundViewPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518A7A224EA2F9700741754 /* ASCBackgroundViewPresentationController.m */; };
+		7585CCC424E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = 7585CCC224E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7585CCC524E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585CCC324E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m */; };
 		759893F62472697E002190D6 /* ASCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 759893F42472697E002190D6 /* ASCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7598945C24726D68002190D6 /* ASCProtocolAutoImplementer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7598945A24726D68002190D6 /* ASCProtocolAutoImplementer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7598945D24726D68002190D6 /* ASCProtocolAutoImplementer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7598945B24726D68002190D6 /* ASCProtocolAutoImplementer.m */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7518A79D24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACSViewControllerLeftRightAnimatedTransition.h; sourceTree = "<group>"; };
+		7518A79E24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACSViewControllerLeftRightAnimatedTransition.m; sourceTree = "<group>"; };
+		7518A7A124EA2F9700741754 /* ASCBackgroundViewPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCBackgroundViewPresentationController.h; sourceTree = "<group>"; };
+		7518A7A224EA2F9700741754 /* ASCBackgroundViewPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCBackgroundViewPresentationController.m; sourceTree = "<group>"; };
+		7585CCC224E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCViewControllerInteractiveTransitionTrigger.h; sourceTree = "<group>"; };
+		7585CCC324E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCViewControllerInteractiveTransitionTrigger.m; sourceTree = "<group>"; };
 		759893F12472697E002190D6 /* ASCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ASCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		759893F42472697E002190D6 /* ASCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCode.h; sourceTree = "<group>"; };
 		759893F52472697E002190D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +114,12 @@
 				75CBDC1B24878476005C167A /* ASCSinglePickerView.m */,
 				75CBDC2124878D0E005C167A /* ASCTimePickerView.h */,
 				75CBDC2024878D0E005C167A /* ASCTimePickerView.m */,
+				7585CCC224E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h */,
+				7585CCC324E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m */,
+				7518A79D24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h */,
+				7518A79E24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m */,
+				7518A7A124EA2F9700741754 /* ASCBackgroundViewPresentationController.h */,
+				7518A7A224EA2F9700741754 /* ASCBackgroundViewPresentationController.m */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -114,11 +132,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				75CBDC2324878D0E005C167A /* ASCTimePickerView.h in Headers */,
+				7518A7A324EA2F9700741754 /* ASCBackgroundViewPresentationController.h in Headers */,
+				7518A79F24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h in Headers */,
 				759893F62472697E002190D6 /* ASCode.h in Headers */,
 				75CBDC1C24878476005C167A /* ASCSinglePickerView.h in Headers */,
 				7598945C24726D68002190D6 /* ASCProtocolAutoImplementer.h in Headers */,
 				75CBDC1824878234005C167A /* UIButton+ASCButton.h in Headers */,
 				75D87559249225F7007E1AC6 /* ASCTextureUtility.h in Headers */,
+				7585CCC424E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +216,9 @@
 				75CBDC2224878D0E005C167A /* ASCTimePickerView.m in Sources */,
 				7598945D24726D68002190D6 /* ASCProtocolAutoImplementer.m in Sources */,
 				75CBDC1924878234005C167A /* UIButton+ASCButton.m in Sources */,
+				7585CCC524E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m in Sources */,
+				7518A7A424EA2F9700741754 /* ASCBackgroundViewPresentationController.m in Sources */,
+				7518A7A024EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

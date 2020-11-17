@@ -19,6 +19,10 @@ FOUNDATION_EXPORT const unsigned char ASCodeVersionString[];
 // category
 #import <ASCode/UIButton+ASCButton.h>
 
+// media
+#import <ASCode/ASCWXPickerViewController.h>
+#import <ASCode/ASCWXPickerCaptureViewController.h>
+
 // misc
 #import <ASCode/ASCProtocolAutoImplementer.h>
 #import <ASCode/ASCTextureUtility.h>
@@ -26,6 +30,8 @@ FOUNDATION_EXPORT const unsigned char ASCodeVersionString[];
 // ui
 #import <ASCode/ASCSinglePickerView.h>
 #import <ASCode/ASCTimePickerView.h>
+#import <ASCode/ASCVideoView.h>
+#import <ASCode/ASCImageVideoView.h>
 #import <ASCode/ASCViewControllerInteractiveTransitionTrigger.h>
 #import <ASCode/ACSViewControllerLeftRightAnimatedTransition.h>
 #import <ASCode/ASCBackgroundViewPresentationController.h>

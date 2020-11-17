@@ -7,15 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7500488D2549140200B6E7DD /* ASCWXPickerImageButtonListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7500488B2549140200B6E7DD /* ASCWXPickerImageButtonListView.h */; };
+		7500488E2549140200B6E7DD /* ASCWXPickerImageButtonListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7500488C2549140200B6E7DD /* ASCWXPickerImageButtonListView.m */; };
+		750339A2255B86E8009AAEDC /* ASCWXPickerMediaListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 750339A0255B86E8009AAEDC /* ASCWXPickerMediaListView.h */; };
+		750339A3255B86E8009AAEDC /* ASCWXPickerMediaListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 750339A1255B86E8009AAEDC /* ASCWXPickerMediaListView.m */; };
+		750339A8255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 750339A6255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.h */; };
+		750339A9255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750339A7255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.m */; };
+		7509A54D25396C9400CE608D /* ASCWXPickerContentMediaCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7509A54B25396C9400CE608D /* ASCWXPickerContentMediaCell.h */; };
+		7509A54E25396C9400CE608D /* ASCWXPickerContentMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509A54C25396C9400CE608D /* ASCWXPickerContentMediaCell.m */; };
+		7509A55325396ED200CE608D /* ASCWXPickerCountSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 7509A55125396ED200CE608D /* ASCWXPickerCountSwitch.h */; };
+		7509A55425396ED200CE608D /* ASCWXPickerCountSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509A55225396ED200CE608D /* ASCWXPickerCountSwitch.m */; };
+		7509A559253979A500CE608D /* ASCWXPickerSelectedMediaData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7509A557253979A500CE608D /* ASCWXPickerSelectedMediaData.h */; };
+		7509A55A253979A500CE608D /* ASCWXPickerSelectedMediaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509A558253979A500CE608D /* ASCWXPickerSelectedMediaData.m */; };
+		7509A55E2539950F00CE608D /* ASCWXPickerStepPageProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7509A55D2539950F00CE608D /* ASCWXPickerStepPageProtocol.h */; };
+		7509A56B2539981900CE608D /* ASCWXPickerResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 7509A5692539981900CE608D /* ASCWXPickerResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7509A56C2539981900CE608D /* ASCWXPickerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7509A56A2539981900CE608D /* ASCWXPickerResult.m */; };
+		75118427253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75118425253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.h */; };
+		75118428253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75118426253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.m */; };
+		7511842E253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7511842C253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.h */; };
+		7511842F253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511842D253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.m */; };
+		75118434253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75118432253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.h */; };
+		75118435253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75118433253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.m */; };
+		75118439253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 75118437253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7511843A253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 75118438253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.m */; };
+		7511843F253FD48800BF1ACE /* ASCWXPickerCaptureButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 7511843D253FD48800BF1ACE /* ASCWXPickerCaptureButton.h */; };
+		75118440253FD48800BF1ACE /* ASCWXPickerCaptureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7511843E253FD48800BF1ACE /* ASCWXPickerCaptureButton.m */; };
+		75118444253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75118442253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.h */; };
+		75118445253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75118443253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.m */; };
+		7511844925400C2300BF1ACE /* ASCWXPickerCaptureStepPageProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7511844825400C2300BF1ACE /* ASCWXPickerCaptureStepPageProtocol.h */; };
+		75120B182543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 75120B162543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.h */; };
+		75120B192543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75120B172543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.m */; };
 		7518A79F24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 7518A79D24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7518A7A024EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518A79E24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m */; };
 		7518A7A324EA2F9700741754 /* ASCBackgroundViewPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7518A7A124EA2F9700741754 /* ASCBackgroundViewPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7518A7A424EA2F9700741754 /* ASCBackgroundViewPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518A7A224EA2F9700741754 /* ASCBackgroundViewPresentationController.m */; };
+		753FEFA325343617006E3AA5 /* ASCWXPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 753FEFA125343617006E3AA5 /* ASCWXPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		753FEFA425343617006E3AA5 /* ASCWXPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753FEFA225343617006E3AA5 /* ASCWXPickerViewController.m */; };
+		753FEFA825343625006E3AA5 /* ASCWXPickerCaptureViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 753FEFA625343625006E3AA5 /* ASCWXPickerCaptureViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		753FEFA925343625006E3AA5 /* ASCWXPickerCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753FEFA725343625006E3AA5 /* ASCWXPickerCaptureViewController.m */; };
+		753FEFB42534399F006E3AA5 /* ASCWXPickerContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 753FEFB22534399F006E3AA5 /* ASCWXPickerContentViewController.h */; };
+		753FEFB52534399F006E3AA5 /* ASCWXPickerContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753FEFB32534399F006E3AA5 /* ASCWXPickerContentViewController.m */; };
+		755E571D2551355E000A7FDF /* ASCWXPickerDrawView.h in Headers */ = {isa = PBXBuildFile; fileRef = 755E571B2551355E000A7FDF /* ASCWXPickerDrawView.h */; };
+		755E571E2551355E000A7FDF /* ASCWXPickerDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 755E571C2551355E000A7FDF /* ASCWXPickerDrawView.m */; };
+		75666C2E2553F12000EDB04C /* ASCWXPickerEditPluginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 75666C2D2553F12000EDB04C /* ASCWXPickerEditPluginProtocol.h */; };
+		75666C322553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 75666C302553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.h */; };
+		75666C332553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 75666C312553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.m */; };
+		758566DF25550335009DC524 /* ASCWXPickerDrawOperationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 758566DD25550335009DC524 /* ASCWXPickerDrawOperationView.h */; };
+		758566E025550335009DC524 /* ASCWXPickerDrawOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758566DE25550335009DC524 /* ASCWXPickerDrawOperationView.m */; };
 		7585CCC424E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h in Headers */ = {isa = PBXBuildFile; fileRef = 7585CCC224E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7585CCC524E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585CCC324E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m */; };
+		758A696D2536A3AB00196102 /* ASCWXPickerAlbumCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 758A696B2536A3AB00196102 /* ASCWXPickerAlbumCell.h */; };
+		758A696E2536A3AB00196102 /* ASCWXPickerAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A696C2536A3AB00196102 /* ASCWXPickerAlbumCell.m */; };
 		759893F62472697E002190D6 /* ASCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 759893F42472697E002190D6 /* ASCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7598945C24726D68002190D6 /* ASCProtocolAutoImplementer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7598945A24726D68002190D6 /* ASCProtocolAutoImplementer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7598945D24726D68002190D6 /* ASCProtocolAutoImplementer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7598945B24726D68002190D6 /* ASCProtocolAutoImplementer.m */; };
+		759EAE04254FE87100540187 /* ASCWXPickerImageVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 759EAE02254FE87100540187 /* ASCWXPickerImageVideoView.h */; };
+		759EAE05254FE87100540187 /* ASCWXPickerImageVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759EAE03254FE87100540187 /* ASCWXPickerImageVideoView.m */; };
+		759EAE09254FE8D500540187 /* ASCWXPickerVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 759EAE07254FE8D500540187 /* ASCWXPickerVideoView.h */; };
+		759EAE0A254FE8D500540187 /* ASCWXPickerVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759EAE08254FE8D500540187 /* ASCWXPickerVideoView.m */; };
+		759ECD5E25343FE700A13001 /* ASCWXPickerSelectButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 759ECD5C25343FE700A13001 /* ASCWXPickerSelectButton.h */; };
+		759ECD5F25343FE700A13001 /* ASCWXPickerSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 759ECD5D25343FE700A13001 /* ASCWXPickerSelectButton.m */; };
+		759ECD6A253444FF00A13001 /* ASCWXPickerTopBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 759ECD68253444FF00A13001 /* ASCWXPickerTopBarView.h */; };
+		759ECD6B253444FF00A13001 /* ASCWXPickerTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759ECD69253444FF00A13001 /* ASCWXPickerTopBarView.m */; };
+		759ECD702534451000A13001 /* ASCWXPickerBottomBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 759ECD6E2534451000A13001 /* ASCWXPickerBottomBarView.h */; };
+		759ECD712534451000A13001 /* ASCWXPickerBottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 759ECD6F2534451000A13001 /* ASCWXPickerBottomBarView.m */; };
+		759ECD7525344AC700A13001 /* ASCWXPickerCountButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 759ECD7325344AC700A13001 /* ASCWXPickerCountButton.h */; };
+		759ECD7625344AC700A13001 /* ASCWXPickerCountButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 759ECD7425344AC700A13001 /* ASCWXPickerCountButton.m */; };
+		75A45706255D3E2600DBA4CF /* ASCWXPickerDrawContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A45704255D3E2600DBA4CF /* ASCWXPickerDrawContentView.h */; };
+		75A45707255D3E2600DBA4CF /* ASCWXPickerDrawContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A45705255D3E2600DBA4CF /* ASCWXPickerDrawContentView.m */; };
+		75A6308E2535495100D260AB /* ASCWXPickerAlbumListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A6308C2535495100D260AB /* ASCWXPickerAlbumListView.h */; };
+		75A6308F2535495100D260AB /* ASCWXPickerAlbumListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A6308D2535495100D260AB /* ASCWXPickerAlbumListView.m */; };
+		75A630A025359E2800D260AB /* ASCWXPickerMediaAlbumModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A6309E25359E2800D260AB /* ASCWXPickerMediaAlbumModel.h */; };
+		75A630A125359E2800D260AB /* ASCWXPickerMediaAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A6309F25359E2800D260AB /* ASCWXPickerMediaAlbumModel.m */; };
+		75A630A525359E3500D260AB /* ASCWXPickerMediaModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A630A325359E3500D260AB /* ASCWXPickerMediaModel.h */; };
+		75A630A625359E3500D260AB /* ASCWXPickerMediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A630A425359E3500D260AB /* ASCWXPickerMediaModel.m */; };
+		75A6DB28253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A6DB26253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.h */; };
+		75A6DB29253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A6DB27253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.m */; };
+		75A6DB34253EE45700B1B0A8 /* ASCWXPickerUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A6DB32253EE45700B1B0A8 /* ASCWXPickerUtility.h */; };
+		75A6DB35253EE45700B1B0A8 /* ASCWXPickerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A6DB33253EE45700B1B0A8 /* ASCWXPickerUtility.m */; };
+		75C75A01255686D100BF8302 /* ASCVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C759FF255686D100BF8302 /* ASCVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75C75A02255686D100BF8302 /* ASCVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C75A00255686D100BF8302 /* ASCVideoView.m */; };
+		75C75A07255686E300BF8302 /* ASCImageVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C75A05255686E300BF8302 /* ASCImageVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75C75A08255686E300BF8302 /* ASCImageVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C75A06255686E300BF8302 /* ASCImageVideoView.m */; };
 		75CBDC1824878234005C167A /* UIButton+ASCButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 75CBDC1624878234005C167A /* UIButton+ASCButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75CBDC1924878234005C167A /* UIButton+ASCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CBDC1724878234005C167A /* UIButton+ASCButton.m */; };
 		75CBDC1C24878476005C167A /* ASCSinglePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75CBDC1A24878476005C167A /* ASCSinglePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,20 +97,106 @@
 		75CBDC2324878D0E005C167A /* ASCTimePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75CBDC2124878D0E005C167A /* ASCTimePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75D87559249225F7007E1AC6 /* ASCTextureUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D87557249225F7007E1AC6 /* ASCTextureUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75D8755A249225F7007E1AC6 /* ASCTextureUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D87558249225F7007E1AC6 /* ASCTextureUtility.m */; };
+		75D8CE86255A430800B230BD /* ASCWXPickerPreviewMediaCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D8CE84255A430800B230BD /* ASCWXPickerPreviewMediaCell.h */; };
+		75D8CE87255A430800B230BD /* ASCWXPickerPreviewMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D8CE85255A430800B230BD /* ASCWXPickerPreviewMediaCell.m */; };
+		75D8CE8B255A488A00B230BD /* ASCWXPickerMediaModelProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D8CE8A255A488A00B230BD /* ASCWXPickerMediaModelProviding.h */; };
+		75D8CE8F255A48C000B230BD /* ASCWXPickerListMediaModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D8CE8D255A48C000B230BD /* ASCWXPickerListMediaModel.h */; };
+		75D8CE90255A48C000B230BD /* ASCWXPickerListMediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D8CE8E255A48C000B230BD /* ASCWXPickerListMediaModel.m */; };
+		75D8CE96255A86F600B230BD /* ASCWXPickerCheckCountSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D8CE94255A86F600B230BD /* ASCWXPickerCheckCountSwitch.h */; };
+		75D8CE97255A86F600B230BD /* ASCWXPickerCheckCountSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D8CE95255A86F600B230BD /* ASCWXPickerCheckCountSwitch.m */; };
+		75F52A14253AA45800286E94 /* ASCWXPickerLoadingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F52A12253AA45800286E94 /* ASCWXPickerLoadingViewController.h */; };
+		75F52A15253AA45800286E94 /* ASCWXPickerLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F52A13253AA45800286E94 /* ASCWXPickerLoadingViewController.m */; };
+		75F52A20253AB6B000286E94 /* ASCWXPickerColorResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F52A1E253AB6B000286E94 /* ASCWXPickerColorResource.h */; };
+		75F52A21253AB6B000286E94 /* ASCWXPickerColorResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F52A1F253AB6B000286E94 /* ASCWXPickerColorResource.m */; };
+		75F52A26253AB6C000286E94 /* ASCWXPickerImageResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F52A24253AB6C000286E94 /* ASCWXPickerImageResource.h */; };
+		75F52A27253AB6C000286E94 /* ASCWXPickerImageResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F52A25253AB6C000286E94 /* ASCWXPickerImageResource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7500488B2549140200B6E7DD /* ASCWXPickerImageButtonListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerImageButtonListView.h; sourceTree = "<group>"; };
+		7500488C2549140200B6E7DD /* ASCWXPickerImageButtonListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerImageButtonListView.m; sourceTree = "<group>"; };
+		750339A0255B86E8009AAEDC /* ASCWXPickerMediaListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerMediaListView.h; sourceTree = "<group>"; };
+		750339A1255B86E8009AAEDC /* ASCWXPickerMediaListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerMediaListView.m; sourceTree = "<group>"; };
+		750339A6255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerMediaListMediaCell.h; sourceTree = "<group>"; };
+		750339A7255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerMediaListMediaCell.m; sourceTree = "<group>"; };
+		7509A54B25396C9400CE608D /* ASCWXPickerContentMediaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerContentMediaCell.h; sourceTree = "<group>"; };
+		7509A54C25396C9400CE608D /* ASCWXPickerContentMediaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerContentMediaCell.m; sourceTree = "<group>"; };
+		7509A55125396ED200CE608D /* ASCWXPickerCountSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCountSwitch.h; sourceTree = "<group>"; };
+		7509A55225396ED200CE608D /* ASCWXPickerCountSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerCountSwitch.m; sourceTree = "<group>"; };
+		7509A557253979A500CE608D /* ASCWXPickerSelectedMediaData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerSelectedMediaData.h; sourceTree = "<group>"; };
+		7509A558253979A500CE608D /* ASCWXPickerSelectedMediaData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerSelectedMediaData.m; sourceTree = "<group>"; };
+		7509A55D2539950F00CE608D /* ASCWXPickerStepPageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerStepPageProtocol.h; sourceTree = "<group>"; };
+		7509A5692539981900CE608D /* ASCWXPickerResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerResult.h; sourceTree = "<group>"; };
+		7509A56A2539981900CE608D /* ASCWXPickerResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerResult.m; sourceTree = "<group>"; };
+		75118425253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerPreviewViewController.h; sourceTree = "<group>"; };
+		75118426253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerPreviewViewController.m; sourceTree = "<group>"; };
+		7511842C253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerImageEditViewController.h; sourceTree = "<group>"; };
+		7511842D253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerImageEditViewController.m; sourceTree = "<group>"; };
+		75118432253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerVideoEditViewController.h; sourceTree = "<group>"; };
+		75118433253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerVideoEditViewController.m; sourceTree = "<group>"; };
+		75118437253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCaptureResult.h; sourceTree = "<group>"; };
+		75118438253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerCaptureResult.m; sourceTree = "<group>"; };
+		7511843D253FD48800BF1ACE /* ASCWXPickerCaptureButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCaptureButton.h; sourceTree = "<group>"; };
+		7511843E253FD48800BF1ACE /* ASCWXPickerCaptureButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerCaptureButton.m; sourceTree = "<group>"; };
+		75118442253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCameraViewController.h; sourceTree = "<group>"; };
+		75118443253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerCameraViewController.m; sourceTree = "<group>"; };
+		7511844825400C2300BF1ACE /* ASCWXPickerCaptureStepPageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCaptureStepPageProtocol.h; sourceTree = "<group>"; };
+		75120B162543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerInterfaceOrientationManager.h; sourceTree = "<group>"; };
+		75120B172543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerInterfaceOrientationManager.m; sourceTree = "<group>"; };
 		7518A79D24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACSViewControllerLeftRightAnimatedTransition.h; sourceTree = "<group>"; };
 		7518A79E24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACSViewControllerLeftRightAnimatedTransition.m; sourceTree = "<group>"; };
 		7518A7A124EA2F9700741754 /* ASCBackgroundViewPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCBackgroundViewPresentationController.h; sourceTree = "<group>"; };
 		7518A7A224EA2F9700741754 /* ASCBackgroundViewPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCBackgroundViewPresentationController.m; sourceTree = "<group>"; };
+		753FEFA125343617006E3AA5 /* ASCWXPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerViewController.h; sourceTree = "<group>"; };
+		753FEFA225343617006E3AA5 /* ASCWXPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerViewController.m; sourceTree = "<group>"; };
+		753FEFA625343625006E3AA5 /* ASCWXPickerCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCaptureViewController.h; sourceTree = "<group>"; };
+		753FEFA725343625006E3AA5 /* ASCWXPickerCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerCaptureViewController.m; sourceTree = "<group>"; };
+		753FEFB22534399F006E3AA5 /* ASCWXPickerContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerContentViewController.h; sourceTree = "<group>"; };
+		753FEFB32534399F006E3AA5 /* ASCWXPickerContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerContentViewController.m; sourceTree = "<group>"; };
+		755E571B2551355E000A7FDF /* ASCWXPickerDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerDrawView.h; sourceTree = "<group>"; };
+		755E571C2551355E000A7FDF /* ASCWXPickerDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerDrawView.m; sourceTree = "<group>"; };
+		75666C2D2553F12000EDB04C /* ASCWXPickerEditPluginProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerEditPluginProtocol.h; sourceTree = "<group>"; };
+		75666C302553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerDrawEditPlugin.h; sourceTree = "<group>"; };
+		75666C312553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerDrawEditPlugin.m; sourceTree = "<group>"; };
+		758566DD25550335009DC524 /* ASCWXPickerDrawOperationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerDrawOperationView.h; sourceTree = "<group>"; };
+		758566DE25550335009DC524 /* ASCWXPickerDrawOperationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerDrawOperationView.m; sourceTree = "<group>"; };
 		7585CCC224E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCViewControllerInteractiveTransitionTrigger.h; sourceTree = "<group>"; };
 		7585CCC324E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCViewControllerInteractiveTransitionTrigger.m; sourceTree = "<group>"; };
+		758A696B2536A3AB00196102 /* ASCWXPickerAlbumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerAlbumCell.h; sourceTree = "<group>"; };
+		758A696C2536A3AB00196102 /* ASCWXPickerAlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerAlbumCell.m; sourceTree = "<group>"; };
 		759893F12472697E002190D6 /* ASCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ASCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		759893F42472697E002190D6 /* ASCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCode.h; sourceTree = "<group>"; };
 		759893F52472697E002190D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7598945A24726D68002190D6 /* ASCProtocolAutoImplementer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCProtocolAutoImplementer.h; sourceTree = "<group>"; };
 		7598945B24726D68002190D6 /* ASCProtocolAutoImplementer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCProtocolAutoImplementer.m; sourceTree = "<group>"; };
+		759EAE02254FE87100540187 /* ASCWXPickerImageVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerImageVideoView.h; sourceTree = "<group>"; };
+		759EAE03254FE87100540187 /* ASCWXPickerImageVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerImageVideoView.m; sourceTree = "<group>"; };
+		759EAE07254FE8D500540187 /* ASCWXPickerVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerVideoView.h; sourceTree = "<group>"; };
+		759EAE08254FE8D500540187 /* ASCWXPickerVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerVideoView.m; sourceTree = "<group>"; };
+		759ECD5C25343FE700A13001 /* ASCWXPickerSelectButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerSelectButton.h; sourceTree = "<group>"; };
+		759ECD5D25343FE700A13001 /* ASCWXPickerSelectButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerSelectButton.m; sourceTree = "<group>"; };
+		759ECD68253444FF00A13001 /* ASCWXPickerTopBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerTopBarView.h; sourceTree = "<group>"; };
+		759ECD69253444FF00A13001 /* ASCWXPickerTopBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerTopBarView.m; sourceTree = "<group>"; };
+		759ECD6E2534451000A13001 /* ASCWXPickerBottomBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerBottomBarView.h; sourceTree = "<group>"; };
+		759ECD6F2534451000A13001 /* ASCWXPickerBottomBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerBottomBarView.m; sourceTree = "<group>"; };
+		759ECD7325344AC700A13001 /* ASCWXPickerCountButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCountButton.h; sourceTree = "<group>"; };
+		759ECD7425344AC700A13001 /* ASCWXPickerCountButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerCountButton.m; sourceTree = "<group>"; };
+		75A45704255D3E2600DBA4CF /* ASCWXPickerDrawContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerDrawContentView.h; sourceTree = "<group>"; };
+		75A45705255D3E2600DBA4CF /* ASCWXPickerDrawContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerDrawContentView.m; sourceTree = "<group>"; };
+		75A6308C2535495100D260AB /* ASCWXPickerAlbumListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerAlbumListView.h; sourceTree = "<group>"; };
+		75A6308D2535495100D260AB /* ASCWXPickerAlbumListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerAlbumListView.m; sourceTree = "<group>"; };
+		75A6309E25359E2800D260AB /* ASCWXPickerMediaAlbumModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerMediaAlbumModel.h; sourceTree = "<group>"; };
+		75A6309F25359E2800D260AB /* ASCWXPickerMediaAlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerMediaAlbumModel.m; sourceTree = "<group>"; };
+		75A630A325359E3500D260AB /* ASCWXPickerMediaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerMediaModel.h; sourceTree = "<group>"; };
+		75A630A425359E3500D260AB /* ASCWXPickerMediaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerMediaModel.m; sourceTree = "<group>"; };
+		75A6DB26253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerAlertViewController.h; sourceTree = "<group>"; };
+		75A6DB27253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerAlertViewController.m; sourceTree = "<group>"; };
+		75A6DB32253EE45700B1B0A8 /* ASCWXPickerUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerUtility.h; sourceTree = "<group>"; };
+		75A6DB33253EE45700B1B0A8 /* ASCWXPickerUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerUtility.m; sourceTree = "<group>"; };
+		75C759FF255686D100BF8302 /* ASCVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCVideoView.h; sourceTree = "<group>"; };
+		75C75A00255686D100BF8302 /* ASCVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCVideoView.m; sourceTree = "<group>"; };
+		75C75A05255686E300BF8302 /* ASCImageVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCImageVideoView.h; sourceTree = "<group>"; };
+		75C75A06255686E300BF8302 /* ASCImageVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCImageVideoView.m; sourceTree = "<group>"; };
 		75CBDC1624878234005C167A /* UIButton+ASCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ASCButton.h"; sourceTree = "<group>"; };
 		75CBDC1724878234005C167A /* UIButton+ASCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ASCButton.m"; sourceTree = "<group>"; };
 		75CBDC1A24878476005C167A /* ASCSinglePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCSinglePickerView.h; sourceTree = "<group>"; };
@@ -46,6 +205,19 @@
 		75CBDC2124878D0E005C167A /* ASCTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCTimePickerView.h; sourceTree = "<group>"; };
 		75D87557249225F7007E1AC6 /* ASCTextureUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCTextureUtility.h; sourceTree = "<group>"; };
 		75D87558249225F7007E1AC6 /* ASCTextureUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCTextureUtility.m; sourceTree = "<group>"; };
+		75D8CE84255A430800B230BD /* ASCWXPickerPreviewMediaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerPreviewMediaCell.h; sourceTree = "<group>"; };
+		75D8CE85255A430800B230BD /* ASCWXPickerPreviewMediaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerPreviewMediaCell.m; sourceTree = "<group>"; };
+		75D8CE8A255A488A00B230BD /* ASCWXPickerMediaModelProviding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerMediaModelProviding.h; sourceTree = "<group>"; };
+		75D8CE8D255A48C000B230BD /* ASCWXPickerListMediaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerListMediaModel.h; sourceTree = "<group>"; };
+		75D8CE8E255A48C000B230BD /* ASCWXPickerListMediaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerListMediaModel.m; sourceTree = "<group>"; };
+		75D8CE94255A86F600B230BD /* ASCWXPickerCheckCountSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerCheckCountSwitch.h; sourceTree = "<group>"; };
+		75D8CE95255A86F600B230BD /* ASCWXPickerCheckCountSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerCheckCountSwitch.m; sourceTree = "<group>"; };
+		75F52A12253AA45800286E94 /* ASCWXPickerLoadingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerLoadingViewController.h; sourceTree = "<group>"; };
+		75F52A13253AA45800286E94 /* ASCWXPickerLoadingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerLoadingViewController.m; sourceTree = "<group>"; };
+		75F52A1E253AB6B000286E94 /* ASCWXPickerColorResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerColorResource.h; sourceTree = "<group>"; };
+		75F52A1F253AB6B000286E94 /* ASCWXPickerColorResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerColorResource.m; sourceTree = "<group>"; };
+		75F52A24253AB6C000286E94 /* ASCWXPickerImageResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCWXPickerImageResource.h; sourceTree = "<group>"; };
+		75F52A25253AB6C000286E94 /* ASCWXPickerImageResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCWXPickerImageResource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +231,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7511842B253FCE0F00BF1ACE /* edit */ = {
+			isa = PBXGroup;
+			children = (
+				7511842C253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.h */,
+				7511842D253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.m */,
+				75118432253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.h */,
+				75118433253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.m */,
+				75666C2D2553F12000EDB04C /* ASCWXPickerEditPluginProtocol.h */,
+				75666C302553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.h */,
+				75666C312553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.m */,
+				758566DD25550335009DC524 /* ASCWXPickerDrawOperationView.h */,
+				758566DE25550335009DC524 /* ASCWXPickerDrawOperationView.m */,
+				75A45704255D3E2600DBA4CF /* ASCWXPickerDrawContentView.h */,
+				75A45705255D3E2600DBA4CF /* ASCWXPickerDrawContentView.m */,
+				755E571B2551355E000A7FDF /* ASCWXPickerDrawView.h */,
+				755E571C2551355E000A7FDF /* ASCWXPickerDrawView.m */,
+			);
+			path = edit;
+			sourceTree = "<group>";
+		};
+		753FEF81253409FB006E3AA5 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				753FEF93253435A8006E3AA5 /* wx_picker */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		753FEF93253435A8006E3AA5 /* wx_picker */ = {
+			isa = PBXGroup;
+			children = (
+				75F52A1D253AB68E00286E94 /* resource */,
+				759ECD67253444C500A13001 /* common */,
+				75A6309C25359DE800D260AB /* model */,
+				7511842B253FCE0F00BF1ACE /* edit */,
+				753FEFAD25343887006E3AA5 /* select */,
+				753FEFAE2534388C006E3AA5 /* capture */,
+			);
+			path = wx_picker;
+			sourceTree = "<group>";
+		};
+		753FEFAD25343887006E3AA5 /* select */ = {
+			isa = PBXGroup;
+			children = (
+				753FEFA125343617006E3AA5 /* ASCWXPickerViewController.h */,
+				753FEFA225343617006E3AA5 /* ASCWXPickerViewController.m */,
+				7509A55D2539950F00CE608D /* ASCWXPickerStepPageProtocol.h */,
+				753FEFB22534399F006E3AA5 /* ASCWXPickerContentViewController.h */,
+				753FEFB32534399F006E3AA5 /* ASCWXPickerContentViewController.m */,
+				75118425253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.h */,
+				75118426253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.m */,
+				7509A54B25396C9400CE608D /* ASCWXPickerContentMediaCell.h */,
+				7509A54C25396C9400CE608D /* ASCWXPickerContentMediaCell.m */,
+				75D8CE84255A430800B230BD /* ASCWXPickerPreviewMediaCell.h */,
+				75D8CE85255A430800B230BD /* ASCWXPickerPreviewMediaCell.m */,
+				75A6308C2535495100D260AB /* ASCWXPickerAlbumListView.h */,
+				75A6308D2535495100D260AB /* ASCWXPickerAlbumListView.m */,
+				758A696B2536A3AB00196102 /* ASCWXPickerAlbumCell.h */,
+				758A696C2536A3AB00196102 /* ASCWXPickerAlbumCell.m */,
+				750339A0255B86E8009AAEDC /* ASCWXPickerMediaListView.h */,
+				750339A1255B86E8009AAEDC /* ASCWXPickerMediaListView.m */,
+				750339A6255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.h */,
+				750339A7255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.m */,
+				759ECD5C25343FE700A13001 /* ASCWXPickerSelectButton.h */,
+				759ECD5D25343FE700A13001 /* ASCWXPickerSelectButton.m */,
+				759ECD7325344AC700A13001 /* ASCWXPickerCountButton.h */,
+				759ECD7425344AC700A13001 /* ASCWXPickerCountButton.m */,
+				7509A55125396ED200CE608D /* ASCWXPickerCountSwitch.h */,
+				7509A55225396ED200CE608D /* ASCWXPickerCountSwitch.m */,
+				75D8CE94255A86F600B230BD /* ASCWXPickerCheckCountSwitch.h */,
+				75D8CE95255A86F600B230BD /* ASCWXPickerCheckCountSwitch.m */,
+			);
+			path = select;
+			sourceTree = "<group>";
+		};
+		753FEFAE2534388C006E3AA5 /* capture */ = {
+			isa = PBXGroup;
+			children = (
+				753FEFA625343625006E3AA5 /* ASCWXPickerCaptureViewController.h */,
+				753FEFA725343625006E3AA5 /* ASCWXPickerCaptureViewController.m */,
+				7511844825400C2300BF1ACE /* ASCWXPickerCaptureStepPageProtocol.h */,
+				75118442253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.h */,
+				75118443253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.m */,
+				7511843D253FD48800BF1ACE /* ASCWXPickerCaptureButton.h */,
+				7511843E253FD48800BF1ACE /* ASCWXPickerCaptureButton.m */,
+			);
+			path = capture;
+			sourceTree = "<group>";
+		};
 		759893E72472697E002190D6 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				75CBDC14248781B5005C167A /* category */,
+				753FEF81253409FB006E3AA5 /* media */,
 				7598945924726D23002190D6 /* misc */,
 				75CBDC15248781BE005C167A /* ui */,
 				759893F42472697E002190D6 /* ASCode.h */,
@@ -98,6 +360,51 @@
 			path = misc;
 			sourceTree = "<group>";
 		};
+		759ECD67253444C500A13001 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				75A6DB32253EE45700B1B0A8 /* ASCWXPickerUtility.h */,
+				75A6DB33253EE45700B1B0A8 /* ASCWXPickerUtility.m */,
+				75120B162543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.h */,
+				75120B172543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.m */,
+				759ECD68253444FF00A13001 /* ASCWXPickerTopBarView.h */,
+				759ECD69253444FF00A13001 /* ASCWXPickerTopBarView.m */,
+				759ECD6E2534451000A13001 /* ASCWXPickerBottomBarView.h */,
+				759ECD6F2534451000A13001 /* ASCWXPickerBottomBarView.m */,
+				7500488B2549140200B6E7DD /* ASCWXPickerImageButtonListView.h */,
+				7500488C2549140200B6E7DD /* ASCWXPickerImageButtonListView.m */,
+				759EAE07254FE8D500540187 /* ASCWXPickerVideoView.h */,
+				759EAE08254FE8D500540187 /* ASCWXPickerVideoView.m */,
+				759EAE02254FE87100540187 /* ASCWXPickerImageVideoView.h */,
+				759EAE03254FE87100540187 /* ASCWXPickerImageVideoView.m */,
+				75F52A12253AA45800286E94 /* ASCWXPickerLoadingViewController.h */,
+				75F52A13253AA45800286E94 /* ASCWXPickerLoadingViewController.m */,
+				75A6DB26253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.h */,
+				75A6DB27253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		75A6309C25359DE800D260AB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				75A6309E25359E2800D260AB /* ASCWXPickerMediaAlbumModel.h */,
+				75A6309F25359E2800D260AB /* ASCWXPickerMediaAlbumModel.m */,
+				75A630A325359E3500D260AB /* ASCWXPickerMediaModel.h */,
+				75A630A425359E3500D260AB /* ASCWXPickerMediaModel.m */,
+				75D8CE8D255A48C000B230BD /* ASCWXPickerListMediaModel.h */,
+				75D8CE8E255A48C000B230BD /* ASCWXPickerListMediaModel.m */,
+				75D8CE8A255A488A00B230BD /* ASCWXPickerMediaModelProviding.h */,
+				7509A557253979A500CE608D /* ASCWXPickerSelectedMediaData.h */,
+				7509A558253979A500CE608D /* ASCWXPickerSelectedMediaData.m */,
+				7509A5692539981900CE608D /* ASCWXPickerResult.h */,
+				7509A56A2539981900CE608D /* ASCWXPickerResult.m */,
+				75118437253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.h */,
+				75118438253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		75CBDC14248781B5005C167A /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +421,10 @@
 				75CBDC1B24878476005C167A /* ASCSinglePickerView.m */,
 				75CBDC2124878D0E005C167A /* ASCTimePickerView.h */,
 				75CBDC2024878D0E005C167A /* ASCTimePickerView.m */,
+				75C759FF255686D100BF8302 /* ASCVideoView.h */,
+				75C75A00255686D100BF8302 /* ASCVideoView.m */,
+				75C75A05255686E300BF8302 /* ASCImageVideoView.h */,
+				75C75A06255686E300BF8302 /* ASCImageVideoView.m */,
 				7585CCC224E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h */,
 				7585CCC324E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m */,
 				7518A79D24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h */,
@@ -124,6 +435,17 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		75F52A1D253AB68E00286E94 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				75F52A1E253AB6B000286E94 /* ASCWXPickerColorResource.h */,
+				75F52A1F253AB6B000286E94 /* ASCWXPickerColorResource.m */,
+				75F52A24253AB6C000286E94 /* ASCWXPickerImageResource.h */,
+				75F52A25253AB6C000286E94 /* ASCWXPickerImageResource.m */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,15 +453,60 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7509A559253979A500CE608D /* ASCWXPickerSelectedMediaData.h in Headers */,
+				75118444253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.h in Headers */,
+				7509A54D25396C9400CE608D /* ASCWXPickerContentMediaCell.h in Headers */,
+				7509A55E2539950F00CE608D /* ASCWXPickerStepPageProtocol.h in Headers */,
+				7500488D2549140200B6E7DD /* ASCWXPickerImageButtonListView.h in Headers */,
+				75118439253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.h in Headers */,
+				75F52A26253AB6C000286E94 /* ASCWXPickerImageResource.h in Headers */,
 				75CBDC2324878D0E005C167A /* ASCTimePickerView.h in Headers */,
+				75666C2E2553F12000EDB04C /* ASCWXPickerEditPluginProtocol.h in Headers */,
+				755E571D2551355E000A7FDF /* ASCWXPickerDrawView.h in Headers */,
 				7518A7A324EA2F9700741754 /* ASCBackgroundViewPresentationController.h in Headers */,
+				7511842E253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.h in Headers */,
+				75A45706255D3E2600DBA4CF /* ASCWXPickerDrawContentView.h in Headers */,
+				75666C322553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.h in Headers */,
+				759EAE04254FE87100540187 /* ASCWXPickerImageVideoView.h in Headers */,
+				758566DF25550335009DC524 /* ASCWXPickerDrawOperationView.h in Headers */,
+				753FEFB42534399F006E3AA5 /* ASCWXPickerContentViewController.h in Headers */,
+				75118434253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.h in Headers */,
+				759EAE09254FE8D500540187 /* ASCWXPickerVideoView.h in Headers */,
+				759ECD6A253444FF00A13001 /* ASCWXPickerTopBarView.h in Headers */,
+				7509A55325396ED200CE608D /* ASCWXPickerCountSwitch.h in Headers */,
+				75D8CE8F255A48C000B230BD /* ASCWXPickerListMediaModel.h in Headers */,
+				750339A8255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.h in Headers */,
+				759ECD7525344AC700A13001 /* ASCWXPickerCountButton.h in Headers */,
+				75A6DB34253EE45700B1B0A8 /* ASCWXPickerUtility.h in Headers */,
+				75A630A525359E3500D260AB /* ASCWXPickerMediaModel.h in Headers */,
+				753FEFA325343617006E3AA5 /* ASCWXPickerViewController.h in Headers */,
+				75A630A025359E2800D260AB /* ASCWXPickerMediaAlbumModel.h in Headers */,
 				7518A79F24EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.h in Headers */,
+				75A6DB28253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.h in Headers */,
+				75A6308E2535495100D260AB /* ASCWXPickerAlbumListView.h in Headers */,
 				759893F62472697E002190D6 /* ASCode.h in Headers */,
+				75120B182543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.h in Headers */,
 				75CBDC1C24878476005C167A /* ASCSinglePickerView.h in Headers */,
+				7511843F253FD48800BF1ACE /* ASCWXPickerCaptureButton.h in Headers */,
+				75F52A20253AB6B000286E94 /* ASCWXPickerColorResource.h in Headers */,
+				759ECD702534451000A13001 /* ASCWXPickerBottomBarView.h in Headers */,
+				759ECD5E25343FE700A13001 /* ASCWXPickerSelectButton.h in Headers */,
+				7509A56B2539981900CE608D /* ASCWXPickerResult.h in Headers */,
+				75118427253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.h in Headers */,
+				75C75A01255686D100BF8302 /* ASCVideoView.h in Headers */,
 				7598945C24726D68002190D6 /* ASCProtocolAutoImplementer.h in Headers */,
+				7511844925400C2300BF1ACE /* ASCWXPickerCaptureStepPageProtocol.h in Headers */,
+				75D8CE8B255A488A00B230BD /* ASCWXPickerMediaModelProviding.h in Headers */,
 				75CBDC1824878234005C167A /* UIButton+ASCButton.h in Headers */,
+				75D8CE96255A86F600B230BD /* ASCWXPickerCheckCountSwitch.h in Headers */,
+				75D8CE86255A430800B230BD /* ASCWXPickerPreviewMediaCell.h in Headers */,
 				75D87559249225F7007E1AC6 /* ASCTextureUtility.h in Headers */,
+				758A696D2536A3AB00196102 /* ASCWXPickerAlbumCell.h in Headers */,
+				750339A2255B86E8009AAEDC /* ASCWXPickerMediaListView.h in Headers */,
+				75F52A14253AA45800286E94 /* ASCWXPickerLoadingViewController.h in Headers */,
+				75C75A07255686E300BF8302 /* ASCImageVideoView.h in Headers */,
 				7585CCC424E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.h in Headers */,
+				753FEFA825343625006E3AA5 /* ASCWXPickerCaptureViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +537,7 @@
 		759893E82472697E002190D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Adair Studio";
 				TargetAttributes = {
 					759893F02472697E002190D6 = {
@@ -211,12 +578,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759ECD5F25343FE700A13001 /* ASCWXPickerSelectButton.m in Sources */,
+				759ECD712534451000A13001 /* ASCWXPickerBottomBarView.m in Sources */,
+				75D8CE87255A430800B230BD /* ASCWXPickerPreviewMediaCell.m in Sources */,
+				7500488E2549140200B6E7DD /* ASCWXPickerImageButtonListView.m in Sources */,
+				753FEFB52534399F006E3AA5 /* ASCWXPickerContentViewController.m in Sources */,
 				75CBDC1D24878476005C167A /* ASCSinglePickerView.m in Sources */,
+				7509A55A253979A500CE608D /* ASCWXPickerSelectedMediaData.m in Sources */,
+				75118440253FD48800BF1ACE /* ASCWXPickerCaptureButton.m in Sources */,
+				759ECD6B253444FF00A13001 /* ASCWXPickerTopBarView.m in Sources */,
+				75120B192543F9E500C832A8 /* ASCWXPickerInterfaceOrientationManager.m in Sources */,
 				75D8755A249225F7007E1AC6 /* ASCTextureUtility.m in Sources */,
+				75C75A02255686D100BF8302 /* ASCVideoView.m in Sources */,
+				750339A3255B86E8009AAEDC /* ASCWXPickerMediaListView.m in Sources */,
+				75118435253FCE4C00BF1ACE /* ASCWXPickerVideoEditViewController.m in Sources */,
+				75118428253FC7E300BF1ACE /* ASCWXPickerPreviewViewController.m in Sources */,
+				75A6DB35253EE45700B1B0A8 /* ASCWXPickerUtility.m in Sources */,
+				7509A56C2539981900CE608D /* ASCWXPickerResult.m in Sources */,
+				753FEFA925343625006E3AA5 /* ASCWXPickerCaptureViewController.m in Sources */,
+				75C75A08255686E300BF8302 /* ASCImageVideoView.m in Sources */,
+				7511843A253FD2EA00BF1ACE /* ASCWXPickerCaptureResult.m in Sources */,
 				75CBDC2224878D0E005C167A /* ASCTimePickerView.m in Sources */,
 				7598945D24726D68002190D6 /* ASCProtocolAutoImplementer.m in Sources */,
+				75118445253FEC2C00BF1ACE /* ASCWXPickerCameraViewController.m in Sources */,
+				7511842F253FCE3E00BF1ACE /* ASCWXPickerImageEditViewController.m in Sources */,
+				759EAE05254FE87100540187 /* ASCWXPickerImageVideoView.m in Sources */,
 				75CBDC1924878234005C167A /* UIButton+ASCButton.m in Sources */,
+				750339A9255B9519009AAEDC /* ASCWXPickerMediaListMediaCell.m in Sources */,
+				758A696E2536A3AB00196102 /* ASCWXPickerAlbumCell.m in Sources */,
+				7509A55425396ED200CE608D /* ASCWXPickerCountSwitch.m in Sources */,
+				7509A54E25396C9400CE608D /* ASCWXPickerContentMediaCell.m in Sources */,
+				759EAE0A254FE8D500540187 /* ASCWXPickerVideoView.m in Sources */,
+				75F52A21253AB6B000286E94 /* ASCWXPickerColorResource.m in Sources */,
+				75D8CE90255A48C000B230BD /* ASCWXPickerListMediaModel.m in Sources */,
+				75A630A125359E2800D260AB /* ASCWXPickerMediaAlbumModel.m in Sources */,
+				753FEFA425343617006E3AA5 /* ASCWXPickerViewController.m in Sources */,
+				759ECD7625344AC700A13001 /* ASCWXPickerCountButton.m in Sources */,
+				758566E025550335009DC524 /* ASCWXPickerDrawOperationView.m in Sources */,
+				75F52A15253AA45800286E94 /* ASCWXPickerLoadingViewController.m in Sources */,
+				75A630A625359E3500D260AB /* ASCWXPickerMediaModel.m in Sources */,
+				755E571E2551355E000A7FDF /* ASCWXPickerDrawView.m in Sources */,
+				75A45707255D3E2600DBA4CF /* ASCWXPickerDrawContentView.m in Sources */,
+				75A6308F2535495100D260AB /* ASCWXPickerAlbumListView.m in Sources */,
+				75F52A27253AB6C000286E94 /* ASCWXPickerImageResource.m in Sources */,
+				75A6DB29253EDC2F00B1B0A8 /* ASCWXPickerAlertViewController.m in Sources */,
 				7585CCC524E78F860017D182 /* ASCViewControllerInteractiveTransitionTrigger.m in Sources */,
+				75666C332553F33D00EDB04C /* ASCWXPickerDrawEditPlugin.m in Sources */,
+				75D8CE97255A86F600B230BD /* ASCWXPickerCheckCountSwitch.m in Sources */,
 				7518A7A424EA2F9700741754 /* ASCBackgroundViewPresentationController.m in Sources */,
 				7518A7A024EA1D3500741754 /* ACSViewControllerLeftRightAnimatedTransition.m in Sources */,
 			);
@@ -251,6 +659,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -312,6 +721,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

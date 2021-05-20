@@ -71,8 +71,9 @@
 #pragma mark - ASCWXPickerEditPluginProtocol
 
 @synthesize contentDidAddHandler = _contentDidAddHandler;
+@synthesize contentDidRemoveHandler = _contentDidRemoveHandler;
+@synthesize contentDidUpdateHandler = _contentDidUpdateHandler;
 @synthesize contentDisplaySize = _contentDisplaySize;
-@synthesize image = _image;
 @synthesize editStateChangedHandler = _editStateChangedHandler;
 
 - (CGFloat)showOperationViewInContainerView:(UIView *)containerView
@@ -92,7 +93,7 @@
     [_operationView removeFromSuperview];
 }
 
-- (void)presentOperationPageWithContainerVC:(UIViewController *)containerVC
+- (void)presentOperationPageWithContainerVC:(UIViewController *)containerVC withContentView:(nullable UIView *)contentView;
 {
     
 }

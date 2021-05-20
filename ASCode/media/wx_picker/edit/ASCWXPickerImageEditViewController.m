@@ -15,8 +15,13 @@
 #import "ASCWXPickerCaptureResult.h"
 #import "ASCWXPickerLoadingViewController.h"
 #import "ASCWXPickerDrawEditPlugin.h"
+#import "ASCWXPickerTextEditPlugin.h"
+#import "ASCWXPickerContentContainerView.h"
+#import "ASCWXPickerContentContainerViewManager.h"
+#import "ASCWXPickerOccludeView.h"
+#import "ASCWXPickerDeleteView.h"
 
-// TODO: [edit] image edit: emoji, text, crop, mosaic
+// TODO: [edit] image edit: emoji, crop, mosaic
 
 @interface ASCWXPickerImageEditViewController ()
 
@@ -24,11 +29,15 @@
 
 @property (nonatomic, strong) ASCWXPickerTopBarView *topBarView;
 @property (nonatomic, strong) ASCWXPickerBottomBarView *bottomBarView;
+@property (nonatomic, strong) UIScrollView *containerScrollView;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIView *pluginOperationView;
 @property (nonatomic, strong) UIView *pluginContentContainerView;
-@property (nonatomic, strong) NSArray<id<ASCWXPickerEditPluginProtocol>> *plugins;
+@property (nonatomic, strong) NSDictionary<NSString *, id<ASCWXPickerEditPluginProtocol>> *plugins;
 @property (nonatomic, assign) CGSize pluginContentDisplaySize;
+@property (nonatomic, strong) ASCWXPickerContentContainerViewManager *contentContainerViewManager;
+@property (nonatomic, strong) ASCWXPickerOccludeView *occludeView;
+@property (nonatomic, strong) ASCWXPickerDeleteView *deleteView;
 
 @end
 
@@ -97,35 +106,55 @@
     bottomBarViewRightButton.backgroundColor = [ASCWXPickerColorResource themeColor];
     [bottomBarViewRightButton sizeToFit];
     _bottomBarView.rightView = bottomBarViewRightButton;
+
+    _containerScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     
-    _imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    CGSize imageSize = _image.size;
+    _pluginContentDisplaySize = CGSizeMake(self.view.frame.size.width, floor(imageSize.height / imageSize.width * self.view.frame.size.width));
+    
+    // image
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _pluginContentDisplaySize.width, MAX(_pluginContentDisplaySize.height, _containerScrollView.frame.size.height))];
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     _imageView.image = _image;
-    [self.view insertSubview:_imageView atIndex:0];
+    
+    if (@available(iOS 11.0, *)) {
+        _containerScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    _containerScrollView.contentSize = _imageView.frame.size;
+    _containerScrollView.showsVerticalScrollIndicator = NO;
+    [_containerScrollView addSubview:_imageView];
+    [self.view insertSubview:_containerScrollView atIndex:0];
+    
+    // plugins - container view
+    _pluginContentContainerView = [[UIView alloc] initWithFrame:_imageView.frame];
+    [_containerScrollView addSubview:_pluginContentContainerView];
+    
+    // plugins - operation view
+    _pluginOperationView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
+    
+    _contentContainerViewManager = [[ASCWXPickerContentContainerViewManager alloc] initWithParentView:_pluginContentContainerView];
+    
+    [self setupPlugins];
+    
+    CGFloat occludeHeight = 0;
+    if (_pluginContentDisplaySize.height < self.view.bounds.size.height)
+    {
+        occludeHeight = (self.view.bounds.size.height - _pluginContentDisplaySize.height) / 2;
+    }
+    _occludeView = [[ASCWXPickerOccludeView alloc] initWithFrame:self.view.bounds];
+    _occludeView.occludeColor = [UIColor blackColor];
+    _occludeView.topOccludeHeight = occludeHeight;
+    _occludeView.bottomOccludeHeight = occludeHeight;
+    _occludeView.userInteractionEnabled = NO;
+    [self.view insertSubview:_occludeView aboveSubview:_containerScrollView];
+    
+    _deleteView = [[ASCWXPickerDeleteView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 160) / 2, self.view.frame.size.height, 160, 80)];
+    [self.view insertSubview:_deleteView aboveSubview:_occludeView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
     [self.view addGestureRecognizer:tap];
     
     self.view.backgroundColor = [UIColor blackColor];
-    
-    // plugins
-    _pluginOperationView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
-    
-    CGSize imageSize = _image.size;
-    if (imageSize.width > imageSize.height)
-    {
-        _pluginContentDisplaySize = CGSizeMake(self.view.frame.size.width, floor(imageSize.height / imageSize.width * self.view.frame.size.width));
-    }
-    else
-    {
-        _pluginContentDisplaySize = CGSizeMake(floor(imageSize.width / imageSize.height * self.view.frame.size.height), self.view.frame.size.height);
-    }
-    // notice: "pluginContentContainerView"'s size is as the same as "self.view"
-    // - why: just what to receive all the touches...... perhaps, there's better method......
-    _pluginContentContainerView = [[UIView alloc] initWithFrame:self.view.bounds];
-    [self.view insertSubview:_pluginContentContainerView atIndex:1];
-    
-    [self setupPlugins];
 }
 
 - (void)setupPlugins
@@ -142,9 +171,8 @@
     ASCWXPickerDrawEditPlugin *drawEditPlugin = [[ASCWXPickerDrawEditPlugin alloc] init];
     drawEditPlugin.contentDisplaySize = contentDisplaySize;
     drawEditPlugin.contentDidAddHandler = ^(UIView * _Nonnull content) {
-        // becase "pluginContentContainerView"'s size is as the same as "self.view", need to adjust the position of the plugin's content view
         content.center = weakSelf.pluginContentContainerView.center;
-        [weakSelf.pluginContentContainerView addSubview:content];
+        [weakSelf.pluginContentContainerView insertSubview:content atIndex:0];
     };
     drawEditPlugin.editStateChangedHandler = ^(BOOL isEditing) {
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showBarViews) object:nil];
@@ -159,7 +187,78 @@
         }
     };
     
-    _plugins = @[ drawEditPlugin ];
+    // text
+    ASCWXPickerTextEditPlugin *textEditPlugin = [[ASCWXPickerTextEditPlugin alloc] init];
+    __weak ASCWXPickerTextEditPlugin *weakTextEditPlugin = textEditPlugin;
+    textEditPlugin.contentDisplaySize = contentDisplaySize;
+    textEditPlugin.contentDidAddHandler = ^(UIView * _Nonnull content) {
+        ASCWXPickerContentContainerView *container = [[ASCWXPickerContentContainerView alloc] init];
+        container.contentView = content;
+        container.center = CGPointMake(weakSelf.containerScrollView.frame.size.width / 2, weakSelf.containerScrollView.contentOffset.y + weakSelf.containerScrollView.frame.size.height / 2);
+        container.tapHandler = ^(ASCWXPickerContentContainerView *contentContainerView){
+            if ([contentContainerView isActive])
+            {
+                [weakTextEditPlugin presentOperationPageWithContainerVC:weakSelf withContentView:contentContainerView.contentView];
+            }
+            else
+            {
+                [weakSelf.contentContainerViewManager activeView:contentContainerView autoDeactive:YES];
+            }
+        };
+        container.transformBeganHandler = ^(ASCWXPickerContentContainerView *contentContainerView) {
+            [weakSelf startMovingContent];
+            [weakSelf.contentContainerViewManager putViewToTop:contentContainerView];
+            [weakSelf.contentContainerViewManager activeView:contentContainerView autoDeactive:NO];
+        };
+        container.transformMovedHandler = ^(ASCWXPickerContentContainerView *contentContainerView) {
+            [weakSelf checkDeletePosition:contentContainerView];
+        };
+        container.transformEndedHandler = ^(ASCWXPickerContentContainerView *contentContainerView) {
+            [weakSelf endMovingContent];
+            if (weakSelf.deleteView.deleteMode)
+            {
+                [contentContainerView removeFromSuperview];
+            }
+            else
+            {
+                [weakSelf confirmContentViewPosition:contentContainerView];
+                [weakSelf.contentContainerViewManager activeView:contentContainerView autoDeactive:YES];
+            }
+        };
+        [weakSelf.pluginContentContainerView addSubview:container];
+        [weakSelf.contentContainerViewManager activeView:container autoDeactive:YES];
+    };
+    textEditPlugin.contentDidRemoveHandler = ^(UIView * _Nonnull content) {
+        ASCWXPickerContentContainerView *container = (ASCWXPickerContentContainerView *)content.superview;
+        if (![container isKindOfClass:[ASCWXPickerContentContainerView class]])
+        {
+            return;
+        }
+        [container removeFromSuperview];
+    };
+    textEditPlugin.contentDidUpdateHandler = ^(UIView * _Nonnull content) {
+        ASCWXPickerContentContainerView *container = (ASCWXPickerContentContainerView *)content.superview;
+        if (![container isKindOfClass:[ASCWXPickerContentContainerView class]])
+        {
+            return;
+        }
+        container.contentView = content;
+        [weakSelf.contentContainerViewManager activeView:container autoDeactive:YES];
+    };
+    textEditPlugin.editStateChangedHandler = ^(BOOL isEditing) {
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showBarViews) object:nil];
+        
+        if (isEditing)
+        {
+            [weakSelf hideBarViews];
+        }
+        else
+        {
+            [weakSelf showBarViews];
+        }
+    };
+    
+    _plugins = @{ @"0": drawEditPlugin, @"2": textEditPlugin };
 }
 
 #pragma mark - button
@@ -192,6 +291,14 @@
         [self completeEditWithImage:self.image editedImage:nil];
         return;
     }
+    
+    // prepare for rendering
+    [self.pluginContentContainerView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull v, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([v conformsToProtocol:@protocol(ASCWXPickerEditPluginContentProtocol)])
+        {
+            [((id<ASCWXPickerEditPluginContentProtocol>)v) prepareForRendering];
+        }
+    }];
     
     // start to generate the edited image
     ASCWXPickerLoadingViewController *loadingVC = [[ASCWXPickerLoadingViewController alloc] init];
@@ -256,18 +363,15 @@
 
 - (void)showOrHidePluginOperationView:(NSUInteger)index isRadio:(BOOL)isRadio isSelected:(BOOL)isSelected
 {
-    id<ASCWXPickerEditPluginProtocol> plugin = nil;
-    if (index < self.plugins.count)
-    {
-        plugin = [self.plugins objectAtIndex:index];
-    }
+    NSString *pluginKey = [NSString stringWithFormat:@"%zd", index];
+    id<ASCWXPickerEditPluginProtocol> plugin = [self.plugins objectForKey:pluginKey];
     
     if (isRadio)
     {
         if (isSelected)
         {
             // hide other before show
-            [self.plugins enumerateObjectsUsingBlock:^(id<ASCWXPickerEditPluginProtocol>  _Nonnull p, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self.plugins enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id<ASCWXPickerEditPluginProtocol>  _Nonnull p, BOOL * _Nonnull stop) {
                 [p hideOperationView];
             }];
             
@@ -285,7 +389,7 @@
     }
     else
     {
-        [plugin presentOperationPageWithContainerVC:self];
+        [plugin presentOperationPageWithContainerVC:self withContentView:nil];
     }
 }
 
@@ -325,6 +429,48 @@
 {
     [self.topBarView toggleShowHideBarView:YES];
     [self.bottomBarView toggleShowHideBarView:YES];
+}
+
+- (void)startMovingContent
+{
+    [self hideBarViews];
+    
+    self.occludeView.hidden = YES;
+    
+    self.deleteView.alpha = 1;
+    self.deleteView.frame = CGRectMake((self.view.frame.size.width - self.deleteView.frame.size.width) / 2, self.view.frame.size.height, self.deleteView.frame.size.width, self.deleteView.frame.size.height);
+    [UIView animateWithDuration:0.15 animations:^{
+        self.deleteView.frame = CGRectMake((self.view.frame.size.width - self.deleteView.frame.size.width) / 2, self.view.frame.size.height - self.deleteView.frame.size.height - 20, self.deleteView.frame.size.width, self.deleteView.frame.size.height);
+    }];
+}
+
+- (void)endMovingContent
+{
+    [self showBarViews];
+    
+    self.occludeView.hidden = NO;
+    
+    [UIView animateWithDuration:0.15 animations:^{
+        self.deleteView.alpha = 0;
+    }];
+}
+
+- (void)confirmContentViewPosition:(ASCWXPickerContentContainerView *)contentContainerView
+{
+    BOOL resetPosition = (self.occludeView.topOccludeHeight > 0 && CGRectGetMaxY(contentContainerView.frame) <= self.occludeView.topOccludeHeight)
+                            || (self.occludeView.bottomOccludeHeight > 0 && CGRectGetMinY(contentContainerView.frame) >= (self.occludeView.frame.size.height - self.occludeView.bottomOccludeHeight));
+    if (resetPosition)
+    {
+        [UIView animateWithDuration:0.15 animations:^{
+            [contentContainerView resetTranslateTransform];
+        }];
+    }
+}
+
+- (void)checkDeletePosition:(ASCWXPickerContentContainerView *)contentContainerView
+{
+    CGPoint pointInDeleteView = [self.deleteView convertPoint:contentContainerView.transformTouchPointInView fromView:contentContainerView];
+    self.deleteView.deleteMode = CGRectContainsPoint(self.deleteView.bounds, pointInDeleteView);
 }
 
 @end

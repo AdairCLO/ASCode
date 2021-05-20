@@ -276,6 +276,70 @@
     return image;
 }
 
++ (UIImage *)textFgColorMode
+{
+    CGSize size = CGSizeMake(22, 22);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 2.0);
+    
+    [[UIColor whiteColor] setStroke];
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    bezierPath.lineWidth = 2;
+    bezierPath.lineCapStyle = kCGLineCapRound;
+    [bezierPath moveToPoint:CGPointMake(1, 1)];
+    [bezierPath addLineToPoint:CGPointMake(21, 1)];
+    [bezierPath addLineToPoint:CGPointMake(21, 21)];
+    [bezierPath addLineToPoint:CGPointMake(1, 21)];
+    [bezierPath addLineToPoint:CGPointMake(1, 1)];
+    [bezierPath stroke];
+    
+    // T
+    [bezierPath moveToPoint:CGPointMake(5, 5)];
+    [bezierPath addLineToPoint:CGPointMake(17, 5)];
+    [bezierPath moveToPoint:CGPointMake(11, 5)];
+    [bezierPath addLineToPoint:CGPointMake(11, 17)];
+    [bezierPath stroke];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
++ (UIImage *)textBgColorMode
+{
+    CGSize size = CGSizeMake(22, 22);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 2.0);
+    
+    [[UIColor whiteColor] setStroke];
+    [[UIColor whiteColor] setFill];
+    
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    bezierPath.lineWidth = 2;
+    bezierPath.lineCapStyle = kCGLineCapRound;
+    [bezierPath moveToPoint:CGPointMake(1, 1)];
+    [bezierPath addLineToPoint:CGPointMake(21, 1)];
+    [bezierPath addLineToPoint:CGPointMake(21, 21)];
+    [bezierPath addLineToPoint:CGPointMake(1, 21)];
+    [bezierPath addLineToPoint:CGPointMake(1, 1)];
+    [bezierPath stroke];
+    [bezierPath fill];
+    
+    // T
+    bezierPath = [UIBezierPath bezierPath];
+    bezierPath.lineWidth = 2;
+    bezierPath.lineCapStyle = kCGLineCapRound;
+    [bezierPath moveToPoint:CGPointMake(5, 5)];
+    [bezierPath addLineToPoint:CGPointMake(17, 5)];
+    [bezierPath moveToPoint:CGPointMake(11, 5)];
+    [bezierPath addLineToPoint:CGPointMake(11, 17)];
+    [bezierPath strokeWithBlendMode:kCGBlendModeClear alpha:1];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 #pragma mark - code should be removed when we have image
 
 + (UIImage *)imageWithColor:(UIColor *)color

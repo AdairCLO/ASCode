@@ -38,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)videoEditClipImage;
 // edit operation view
 + (UIImage *)undoImage;
++ (UIImage *)textFgColorMode;
++ (UIImage *)textBgColorMode;
 
 @end
 

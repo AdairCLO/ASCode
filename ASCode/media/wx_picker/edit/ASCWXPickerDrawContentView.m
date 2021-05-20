@@ -15,4 +15,9 @@
     return self.hasStroke;
 }
 
+- (void)prepareForRendering
+{
+    
+}
+
 @end

@@ -346,8 +346,8 @@ static const CGFloat kCollectionViewItemMargin = 10;
     }
     else
     {
-        CGFloat imageSize = self.view.bounds.size.width;
-        [self.mediaModel requestImageWithIndex:indexPath.row size:CGSizeMake(imageSize, imageSize) completed:^(UIImage * _Nonnull image, NSString * _Nonnull mediaIdentifier) {
+        CGFloat imageSize = self.view.bounds.size.height;
+        [self.mediaModel requestImageWithIndex:indexPath.row size:CGSizeMake(0, imageSize) completed:^(UIImage * _Nonnull image, NSString * _Nonnull mediaIdentifier) {
             if ([mediaIdentifier isEqualToString:cellIdentifier])
             {
                 cell.imageVideoView.image = image;
